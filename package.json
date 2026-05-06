@@ -1,0 +1,29 @@
+{
+  "name": "ai-demo-automation-playwright",
+  "version": "1.0.0",
+  "description": "Professional QA automation portfolio project inspired by real-world AI product testing workflows.",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:auth": "playwright test tests/auth.spec.js",
+    "test:demo": "playwright test tests/demo.spec.js",
+    "test:headed": "playwright test --headed",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:ci": "playwright test --reporter=line",
+    "report": "playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "qa",
+    "testing",
+    "portfolio"
+  ],
+  "author": "Senior QA Automation Engineer",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "dotenv": "^16.3.1"
+  }
+}
