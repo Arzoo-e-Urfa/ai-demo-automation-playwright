@@ -1,47 +1,54 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
-
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
 require('dotenv').config();
 
 /**
- * @see https://playwright.dev/docs/test-configuration
+ * Senior-level Playwright Configuration
+ * Optimized for CI/CD stability and detailed failure analysis.
  */
 module.exports = defineConfig({
   testDir: './tests',
-  /* Maximum time one test can run for. */
-  timeout: 60000,
+  timeout: 60 * 1000,
   expect: {
     timeout: 10000,
   },
-  /* Run tests in files in parallel */
   fullyParallel: true,
-  /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
-  /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
-  /* Opt out of parallel tests on CI. */
+  
+  /* Advanced Retry Strategy: Retries on CI to handle flakiness, 1 retry locally for stability */
+  retries: process.env.CI ? 2 : 1,
+  
   workers: process.env.CI ? 1 : undefined,
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  reporter: [['html'], ['list']],
+
   use: {
-    /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: process.env.BASE_URL || 'https://example-ai-platform.com',
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    
+    /* Advanced Debugging: Collect trace only on failure to keep reports lean but useful */
+    trace: 'retain-on-failure',
+    
+    /* UI Validation: Automatic screenshots on failure for rapid visual debugging */
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
+    
+    /* State Retention: Record video on first retry to analyze intermittent issues */
+    video: 'on-first-retry',
+    
+    /* Custom test-id attribute used across the SaaS platform */
+    testIdAttribute: 'data-testid',
   },
 
-  /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
     },
   ],
 });
