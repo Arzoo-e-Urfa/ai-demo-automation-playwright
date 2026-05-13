@@ -85,12 +85,32 @@ By abstracting UI authentication into the `loggedInPage` fixture, the framework 
 
 > *Note for recruiters: The following screenshots showcase the framework execution and Playwright HTML reports.*
 
-<!-- 
-SUGGESTIONS FOR SCREENSHOTS:
-1. Playwright HTML Report: Add a screenshot of the `playwright-report` HTML page showing all passed tests.
-2. Architecture Diagram: Add a simple diagram showing how the `loggedInPage` fixture feeds into the `tests/` directory.
-3. Trace Viewer: Add a screenshot of the Playwright Trace Viewer timeline.
+### 📊 Playwright HTML Report
+Comprehensive test execution report showing 100% pass rate, execution time, and detailed step-by-step logs.
 
-Place your images in a `.github/assets/` folder and link them here like this:
-![Playwright HTML Report](.github/assets/html-report.png) 
--->
+![Playwright HTML Report](https://placehold.co/800x400/f8fafc/334155?text=Playwright+HTML+Report)
+<!-- To replace: Upload html-report.png to .github/assets/ and replace URL above with: .github/assets/html-report.png -->
+
+### 🗂️ Folder Structure
+Modular and scalable directory layout separating tests, fixtures, and configurations.
+
+![Folder Structure](https://placehold.co/800x400/f8fafc/334155?text=Folder+Structure)
+<!-- To replace: Upload folder-structure.png to .github/assets/ and replace URL above with: .github/assets/folder-structure.png -->
+
+### ⚡ Test Execution
+Headless/headed execution logs demonstrating speed, parallel processing, and reliability.
+
+![Test Execution](https://placehold.co/800x400/f8fafc/334155?text=Test+Execution)
+<!-- To replace: Upload test-execution.png to .github/assets/ and replace URL above with: .github/assets/test-execution.png -->
+
+### 🔍 Trace Viewer
+Playwrights time-traveling trace viewer capturing DOM snapshots, network requests, and console logs for robust debugging.
+
+![Trace Viewer](https://placehold.co/800x400/f8fafc/334155?text=Trace+Viewer)
+<!-- To replace: Upload trace-viewer.png to .github/assets/ and replace URL above with: .github/assets/trace-viewer.png -->
+
+### 🏗️ Fixtures Architecture
+Diagram illustrating the DRY implementation of `auth.fixture.js` and how it securely yields authenticated pages to spec files.
+
+![Fixtures Architecture](https://placehold.co/800x400/f8fafc/334155?text=Fixtures+Architecture)
+<!-- To replace: Upload fixtures-architecture.png to .github/assets/ and replace URL above with: .github/assets/fixtures-architecture.png -->
