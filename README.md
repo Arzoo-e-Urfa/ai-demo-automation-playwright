@@ -85,16 +85,16 @@ By abstracting UI authentication into the `loggedInPage` fixture, the framework 
 
 ### 🏗️ Framework Structure
 A highly scalable directory structure cleanly separating test specifications, fixtures, and utilities.
-![Framework Structure](.github/assets/framework-structure.svg)
+![Framework Structure](.github/assets/framework-structure.png)
 
 ### 🔐 Playwright Fixtures Architecture
 Demonstrates the DRY implementation of `auth.fixture.js`, securely yielding authenticated pages into spec files.
-![Fixtures Architecture](.github/assets/fixtures-architecture.svg)
+![Fixtures Architecture](.github/assets/fixtures-architecture.png)
 
 ### 🧠 AI-Assisted QA Workflow
 Leveraging cutting-edge LLMs to design robust test strategies and ensure comprehensive application coverage before executing in CI/CD.
-![AI QA Workflow](.github/assets/ai-workflow.svg)
+![AI QA Workflow](.github/assets/ai-workflow.png)
 
 ### ⚡ Parallel Test Execution Pipeline
 Headless/headed execution logging demonstrating speed, parallel multi-worker processing, and reliable trace viewing.
-![Test Execution Flow](.github/assets/test-execution.svg)
+![Test Execution Flow](.github/assets/test-execution.png)
