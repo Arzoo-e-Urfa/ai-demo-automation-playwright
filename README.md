@@ -4,8 +4,6 @@
 
 A professional, architect-level E2E automation repository built with **Playwright** and **Node.js**. This suite is designed to demonstrate production-grade testing practices for modern, high-scale SaaS platforms.
 
-> **Impact Statement:** Designed as a production-grade QA automation portfolio project targeting remote QA Engineer, QA Automation Engineer, and AI Product QA roles.
-
 ## 🏭 Production Context
 
 This framework simulates complex testing workflows for an **AI-powered SaaS platform**. It is engineered to validate mission-critical services, including:
