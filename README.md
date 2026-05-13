@@ -81,36 +81,20 @@ This framework utilizes Playwrights powerful `test.extend()` capability to build
 
 By abstracting UI authentication into the `loggedInPage` fixture, the framework ensures that test files remain strictly focused on business logic, adhering to the **DRY (Dont Repeat Yourself)** principle. This architectural decision makes the test suite highly resilient and drastically reduces test execution time across multiple suites.
 
-## 📸 Automation Reports & Architecture Diagrams
+## 📸 Architecture & Execution Visuals
 
-> *Note for recruiters: The following screenshots showcase the framework execution and Playwright HTML reports.*
+### 🏗️ Framework Structure
+A highly scalable directory structure cleanly separating test specifications, fixtures, and utilities.
+![Framework Structure](.github/assets/framework-structure.svg)
 
-### 📊 Playwright HTML Report
-Comprehensive test execution report showing 100% pass rate, execution time, and detailed step-by-step logs.
+### 🔐 Playwright Fixtures Architecture
+Demonstrates the DRY implementation of `auth.fixture.js`, securely yielding authenticated pages into spec files.
+![Fixtures Architecture](.github/assets/fixtures-architecture.svg)
 
-![Playwright HTML Report](https://placehold.co/800x400/f8fafc/334155?text=Playwright+HTML+Report)
-<!-- To replace: Upload html-report.png to .github/assets/ and replace URL above with: .github/assets/html-report.png -->
+### 🧠 AI-Assisted QA Workflow
+Leveraging cutting-edge LLMs to design robust test strategies and ensure comprehensive application coverage before executing in CI/CD.
+![AI QA Workflow](.github/assets/ai-workflow.svg)
 
-### 🗂️ Folder Structure
-Modular and scalable directory layout separating tests, fixtures, and configurations.
-
-![Folder Structure](https://placehold.co/800x400/f8fafc/334155?text=Folder+Structure)
-<!-- To replace: Upload folder-structure.png to .github/assets/ and replace URL above with: .github/assets/folder-structure.png -->
-
-### ⚡ Test Execution
-Headless/headed execution logs demonstrating speed, parallel processing, and reliability.
-
-![Test Execution](https://placehold.co/800x400/f8fafc/334155?text=Test+Execution)
-<!-- To replace: Upload test-execution.png to .github/assets/ and replace URL above with: .github/assets/test-execution.png -->
-
-### 🔍 Trace Viewer
-Playwrights time-traveling trace viewer capturing DOM snapshots, network requests, and console logs for robust debugging.
-
-![Trace Viewer](https://placehold.co/800x400/f8fafc/334155?text=Trace+Viewer)
-<!-- To replace: Upload trace-viewer.png to .github/assets/ and replace URL above with: .github/assets/trace-viewer.png -->
-
-### 🏗️ Fixtures Architecture
-Diagram illustrating the DRY implementation of `auth.fixture.js` and how it securely yields authenticated pages to spec files.
-
-![Fixtures Architecture](https://placehold.co/800x400/f8fafc/334155?text=Fixtures+Architecture)
-<!-- To replace: Upload fixtures-architecture.png to .github/assets/ and replace URL above with: .github/assets/fixtures-architecture.png -->
+### ⚡ Parallel Test Execution Pipeline
+Headless/headed execution logging demonstrating speed, parallel multi-worker processing, and reliable trace viewing.
+![Test Execution Flow](.github/assets/test-execution.svg)
