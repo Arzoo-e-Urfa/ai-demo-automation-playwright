@@ -73,3 +73,24 @@ This repository is more than a test suite; it is a demonstration of **Scalable Q
 
 ---
 **Disclaimer:** *This project is inspired by real-world enterprise QA workflows but contains no proprietary data or source code. All configurations are tailored for a generic AI-driven SaaS environment.*
+
+
+## 🛠️ Custom Fixtures & Authentication Architecture
+
+This framework utilizes Playwrights powerful `test.extend()` capability to build scalable, professional test fixtures. 
+
+By abstracting UI authentication into the `loggedInPage` fixture, the framework ensures that test files remain strictly focused on business logic, adhering to the **DRY (Dont Repeat Yourself)** principle. This architectural decision makes the test suite highly resilient and drastically reduces test execution time across multiple suites.
+
+## 📸 Automation Reports & Architecture Diagrams
+
+> *Note for recruiters: The following screenshots showcase the framework execution and Playwright HTML reports.*
+
+<!-- 
+SUGGESTIONS FOR SCREENSHOTS:
+1. Playwright HTML Report: Add a screenshot of the `playwright-report` HTML page showing all passed tests.
+2. Architecture Diagram: Add a simple diagram showing how the `loggedInPage` fixture feeds into the `tests/` directory.
+3. Trace Viewer: Add a screenshot of the Playwright Trace Viewer timeline.
+
+Place your images in a `.github/assets/` folder and link them here like this:
+![Playwright HTML Report](.github/assets/html-report.png) 
+-->
